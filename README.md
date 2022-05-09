@@ -1,3 +1,10 @@
+# iPlayMusic
+
+* Husk at pull fra main inden du merge changes til en PR
+
+##
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
