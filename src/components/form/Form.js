@@ -1,41 +1,49 @@
 import React from "react";
 import { FaRegUserCircle } from "react-icons/fa";
 import { RiLockPasswordLine } from "react-icons/ri";
+import { IoIosFingerPrint } from "react-icons/io";
+import "./Form.css";
 const Form = () => {
   return (
-    <div>
-      <h2>Log In</h2>
-      <form className="login-form bg-white text-black mt-5" action="">
-        <div className="form-group">
-          <label>
-            Username <br />
+    <div className="login-form-page h-full pl-6 pr-6 pt-8 pb-8">
+      <div className="login-header ">
+        <h2 className="text-3xl">Log In</h2>
+      </div>
+      <form className="login-form" action="">
+        <div className="form-group mb-6">
+          <label className="font-bold pl-2 pb-3 block">Username</label>
+          <div className=" flex justify-center items-center border-b-4 border-black text-xl">
             <input
-              className="border-b-4 outline-none mt-5 mb-5"
+              className="grow h-12 text-base pr-2 pl-2"
               type="text"
               name="username"
               placeholder="Enter your username "
             />
             <FaRegUserCircle />
-          </label>
+          </div>
         </div>
-        <div className="form-group">
-          <label>
-            Password <br />
+        <div className="form-group mb-6">
+          <label className="font-bold pl-2 pb-3 block">Password</label>
+          <div className=" flex justify-center items-center border-b-4 border-black text-xl">
             <input
-              className=" outline-none border-b-4 mt-5"
-              type="password"
+              className="grow h-12 text-base pr-2 pl-2"
+              type="text"
               name="password"
-              placeholder="Enter your password"
+              placeholder="Enter your password "
             />
             <RiLockPasswordLine />
-          </label>
+          </div>
         </div>
-
-        <br />
-        <button className="w-44 login-button mt-6 border-2 rounded-3xl">
+        <button className="login-button w-full border-4 border-black rounded-3xl p-2">
           LOG IN
         </button>
       </form>
+      <div className="login-touch flex pt-8 flex-col items-center">
+        <button className="text-4xl bg-pink-500 w-16 h-16 text-white flex justify-center items-center rounded-full">
+          <IoIosFingerPrint />
+        </button>
+        <p className="mt-2 text-gray-500 text-sm">One-Touch Login</p>
+      </div>
     </div>
   );
 };
