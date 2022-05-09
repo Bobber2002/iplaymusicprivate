@@ -74,6 +74,11 @@ function App() {
             {/* {artist.images.length ? <img width={"100%"} src={artist.images[0].url} alt=""/> : <div>No Image</div>}   */}
             {artist.name}
             <button className='border-2' onClick={()=>{setSong(artist.preview_url); console.log("Previewing "+artist.name);}}>Preview</button>
+            <audio controls>
+              <source src={artist.preview_url}/>
+            </audio><audio controls>
+              <source src={song}/>
+            </audio>
         </div>
     ))
 }
@@ -89,9 +94,6 @@ function App() {
     <button type={"submit"}>Search</button>
 </form>
   <button style={{width: "60px", height: "40px" }} onClick={logData}/>
-  <audio controls>
-        <source src="https://p.scdn.co/mp3-preview/135c5c2caba0db75f946dec7e93fdb752fe8d399?cid=c928f26754d24f92aa2742e5f55daedb"/>
-  </audio>
 {renderArtists()}
     </div>
   );
