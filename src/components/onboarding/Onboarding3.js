@@ -2,13 +2,13 @@ import React from "react";
 import { IoIosHeart } from "react-icons/io";
 import { IoMdMusicalNote } from "react-icons/io";
 import { IoIosRadio } from "react-icons/io";
-const Onboarding1 = () => {
+const Onboarding3 = () => {
   return (
     <div className="w-full">
       <div className="bg-orange-300 mb-6">Onbording IMG</div>
       <div className="onbording1-content ">
         <div className="onbording1-content-title-paragraph bg-orange-400 mb-6">
-          <h2>Where Words Fail,Music Speaks</h2>
+          <h2>Peace.LoveMusic</h2>
           <p>
             Vivamus auctor dui dignissim, sollicitudin nunc ac, aliquam justo.
             Vestibulum pellentesque lacinia eleifend.
@@ -33,4 +33,4 @@ const Onboarding1 = () => {
   );
 };
 
-export default Onboarding1;
+export default Onboarding3;
