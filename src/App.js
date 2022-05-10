@@ -1,24 +1,16 @@
 import logo from './logo.svg';
+import {IoIosRadio} from 'react-icons/io';
+import {FaHeart} from 'react-icons/fa';
+import {BsMusicNote} from 'react-icons/bs';
+import color1 from './assets/svgs/tutorialColor1.svg';
+import Walkthrough1 from './components/walkthrough/Walkthrough1';
+import Walkthrough2 from './components/walkthrough/Walkthrough2';
+import Walkthrough3 from './components/walkthrough/Walkthrough3';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <></>
   );
 }
 
