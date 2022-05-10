@@ -1,6 +1,6 @@
 # iPlayMusic
 
-* Husk at pull fra main inden du merge changes til en PR
+* Husk at pull fra main inden du merger changes til en PR
 
 ##
 
