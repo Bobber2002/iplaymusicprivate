@@ -3,6 +3,11 @@ import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoMdSearch } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import { IoIosPulse } from "react-icons/io";
+import { IoIosMicrophone } from "react-icons/io";
+import { IoMdWifi } from "react-icons/io";
+import { IoIosContrast } from "react-icons/io";
+import { IoMdSettings } from "react-icons/io";
 
 const Category = () => {
   return (
@@ -19,7 +24,7 @@ const Category = () => {
         <selected-option>
           <div
             className="flex justify-between items-center bg-[#D70060]
- text-white w-full h-16 p-3 rounded-2xl text-xl"
+                     text-white w-full h-16 p-3 rounded-2xl text-xl"
           >
             <option value="">Alternative</option>
             <span className="dot">...</span>
@@ -87,6 +92,23 @@ const Category = () => {
             <span className="dot">...</span>
           </div>
         </selected-option>
+      </div>
+      <div className="category-menu flex pt-8 justify-between items-center w-full">
+        <button className=" text-2xl">
+          <IoIosPulse className="text-black" />
+        </button>
+        <button>
+          <IoIosMicrophone className=" bg-gradient-to-r from-[#EE0979] to-[#FF6A00] text-2xl text-white rounded-full" />
+        </button>
+        <button>
+          <IoMdWifi className=" bg-gradient-to-r from-[#EE0979] to-[#FF6A00] text-4xl text-white rounded-full" />
+        </button>
+        <button>
+          <IoIosContrast className=" bg-gradient-to-r from-[#EE0979] to-[#FF6A00] text-2xl text-white rounded-full" />
+        </button>
+        <button>
+          <IoMdSettings className=" bg-gradient-to-r from-[#EE0979] to-[#FF6A00] text-2xl text-white rounded-full" />
+        </button>
       </div>
     </div>
   );
