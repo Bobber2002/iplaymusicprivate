@@ -11,7 +11,7 @@ import { IoMdSettings } from "react-icons/io";
 
 const Category = () => {
   return (
-    <div className="category-content p-5">
+    <div className="category-content p-5 max-w-md m-auto">
       <div className="category-header flex justify-center items-center gap-10">
         <IoIosArrowBack />
         <h2 className="category-main-title">CATEGORIES</h2>
