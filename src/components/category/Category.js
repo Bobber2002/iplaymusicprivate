@@ -12,7 +12,7 @@ import { IoMdSettings } from "react-icons/io";
 const Category = () => {
   return (
     <div className="category-content p-5 max-w-md m-auto">
-      <div className="category-header flex justify-center items-center gap-10">
+      <div className="category-header flex justify-between items-center">
         <IoIosArrowBack />
         <h2 className="category-main-title">CATEGORIES</h2>
         <IoMdSearch />
@@ -93,7 +93,7 @@ const Category = () => {
           </div>
         </selected-option>
       </div>
-      <div className="category-menu flex pt-8 justify-between items-center w-full">
+      <div className="category-menu flex pt-8 justify-between items-center w-full m-auto">
         <button className=" text-2xl">
           <IoIosPulse className="text-black" />
         </button>
