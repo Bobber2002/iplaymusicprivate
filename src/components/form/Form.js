@@ -40,7 +40,7 @@ const Form = () => {
         </div>
         <button
           onClick={() => {
-            navigate("/onboarding-1");
+            navigate("/walkthrough-1");
           }}
           className="login-button w-full border-4 border-black rounded-3xl p-2"
         >
@@ -50,7 +50,7 @@ const Form = () => {
       <div className="login-touch flex pt-8 flex-col items-center">
         <button
           onClick={() => {
-            navigate("/onboarding-1");
+            navigate("/walkthrough-1");
           }}
           className="text-4xl bg-pink-500 w-16 h-16 text-white flex justify-center items-center rounded-full"
         >
