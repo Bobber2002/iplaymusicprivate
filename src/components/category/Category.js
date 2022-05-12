@@ -1,5 +1,4 @@
 //create spotify category page
-import React from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoMdSearch } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
