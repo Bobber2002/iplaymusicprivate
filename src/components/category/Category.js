@@ -1,12 +1,15 @@
 //create spotify category page
-import { IoIosArrowBack } from "react-icons/io";
-import { IoMdSearch } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
-import { IoIosPulse } from "react-icons/io";
-import { IoIosMicrophone } from "react-icons/io";
-import { IoMdWifi } from "react-icons/io";
-import { IoIosContrast } from "react-icons/io";
-import { IoMdSettings } from "react-icons/io";
+import React from "react";
+import {
+  IoIosArrowBack,
+  IoMdSearch,
+  IoIosArrowForward,
+  IoIosPulse,
+  IoIosMicrophone,
+  IoMdWifi,
+  IoIosContrast,
+  IoMdSettings,
+} from "react-icons/io";
 
 const Category = () => {
   return (
