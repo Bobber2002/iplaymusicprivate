@@ -4,10 +4,12 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import { IoIosFingerPrint } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import "./Form.css";
+
 const Form = () => {
   const navigate = useNavigate();
+
   return (
-    <div className="login-form-page h-full pl-6 pr-6 pt-8 pb-8">
+    <div className="login-form-page h-full pl-6 pr-6 pt-8 pb-8 max-w-md m-auto">
       <div className="login-header ">
         <h2 className="text-3xl">Log In</h2>
       </div>

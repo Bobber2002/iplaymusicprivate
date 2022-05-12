@@ -2,10 +2,9 @@ import Walkthrough1 from './components/walkthrough/Walkthrough1';
 import Walkthrough2 from './components/walkthrough/Walkthrough2';
 import Walkthrough3 from './components/walkthrough/Walkthrough3';
 import Events from './Pages/Events';
-import './App.css';
 import Form from "./components/form/Form";
+import Category from "./components/category/Category";
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
 
 function App() {
   return (
@@ -16,6 +15,7 @@ function App() {
         <Route path="/walkthrough-2" element={<Walkthrough2 />} />
         <Route path="/walkthrough-3" element={<Walkthrough3 />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/category" element={<Category />} />
       </Routes>
     </div>
   );
