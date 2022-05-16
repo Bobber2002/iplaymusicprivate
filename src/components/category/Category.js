@@ -6,12 +6,12 @@ const Category = () => {
   return (
     <div className="category-content p-5 max-w-md m-auto">
       <div className="category-header flex justify-between items-center">
-        <IoIosArrowBack />
+        <IoIosArrowBack className="text-2xl" />
         <h2 className="category-main-title">CATEGORIES</h2>
-        <IoMdSearch />
+        <IoMdSearch className="text-2xl" />
       </div>
       <div>
-        <h1 className="category-title mt-5 mb-5 text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#EE0979] to-[#FF6A00] ">
+        <h1 className="category-title mt-5 mb-5 pb-2 text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#EE0979] to-[#FF6A00] ">
           Categories
         </h1>
         <selected-option>
@@ -20,11 +20,11 @@ const Category = () => {
                      text-white w-full h-16 p-3 rounded-2xl text-xl"
           >
             <option value="">Alternative</option>
-            <span className="dot">...</span>
+            <span className="dot h-12 text-2xl">...</span>
           </div>
           <div className="flex justify-between items-center bg-[#E54028] text-white w-full h-16 mt-3 p-3 rounded-2xl text-xl">
             <option value="">Blues</option>
-            <span className="dot">...</span>
+            <span className="dot h-12 text-2xl">...</span>
           </div>
           <div className="ml-3 mt-5">
             <div className="flex justify-between items-center mt-4 mb-4">
@@ -58,31 +58,31 @@ const Category = () => {
           </div>
           <div className="flex justify-between items-center bg-[#F18D05] text-white w-full h-16 mt-3 p-3 rounded-2xl text-xl">
             <option value="">Classical</option>
-            <span className="dot">...</span>
+            <span className="dot h-12 text-2xl">...</span>
           </div>
           <div className="flex justify-between items-center bg-[#F2BC06] text-white w-full h-16 mt-3 p-3 rounded-2xl text-xl">
             <option value="">Country</option>
-            <span className="dot">...</span>
+            <span className="dot h-12 text-2xl">...</span>
           </div>
           <div className="flex justify-between items-center bg-[#5eb11c] text-white w-full h-16 mt-3 p-3 rounded-2xl text-xl">
             <option value="">Dance</option>
-            <span className="dot">...</span>
+            <span className="dot h-12 text-2xl">...</span>
           </div>
           <div className="flex justify-between items-center bg-[#3A7634] text-white w-full h-16 mt-3 p-3 rounded-2xl text-xl">
             <option value="">Electronic</option>
-            <span className="dot">...</span>
+            <span className="dot h-12 text-2xl">...</span>
           </div>
           <div className="flex justify-between items-center bg-[#0ABEBE] text-white w-full h-16 mt-3 p-3 rounded-2xl text-xl">
             <option value="">Fitness & Workout</option>
-            <span className="dot">...</span>
+            <span className="dot h-12 text-2xl">...</span>
           </div>
           <div className="flex justify-between items-center bg-[#00A1CB] text-white w-full h-16 mt-3 p-3 rounded-2xl text-xl">
             <option value="">Hip-Hop/Rap</option>
-            <span className="dot">...</span>
+            <span className="dot h-12 text-2xl">...</span>
           </div>
           <div className="flex justify-between items-center bg-[#115793] text-white w-full h-16 mt-3 p-3 rounded-2xl text-xl">
             <option value="">Industrial</option>
-            <span className="dot">...</span>
+            <span className="dot h-12 text-2xl">...</span>
           </div>
         </selected-option>
       </div>
