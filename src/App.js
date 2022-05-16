@@ -6,6 +6,7 @@ import Events from './Pages/Events';
 import Form from "./components/form/Form";
 import Sandbox from './Pages/Sandbox';
 import Category from "./components/category/Category";
+import PlayList from "./components/playlist/PlayList";
 import { Route, Routes } from "react-router-dom";
 
 function App() {

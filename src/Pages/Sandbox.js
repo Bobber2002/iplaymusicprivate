@@ -16,14 +16,14 @@ const Sandbox = () => {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        spaceBetween={30}
-        slidesPerView={"3"}
+        spaceBetween={70}
+        slidesPerView={"2"}
         loop={true}
         loopFillGroupWithBlank={true}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
-          depth: 250,
+          depth: 350,
           modifier: 1,
           slideShadows: false
         }}
