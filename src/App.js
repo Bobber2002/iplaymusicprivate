@@ -6,6 +6,7 @@ import Form from "./components/form/Form";
 import Category from "./components/category/Category";
 import PlayList from "./components/playlist/PlayList";
 import { Route, Routes } from "react-router-dom";
+import AllArtist from "./components/all-artist/AllArtist";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/category" element={<Category />} />
         <Route path="/playlist" element={<PlayList />} />
+        <Route path="/allartists" element={<AllArtist />} />
       </Routes>
     </div>
   );
