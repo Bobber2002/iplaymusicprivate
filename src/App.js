@@ -4,7 +4,6 @@ import Walkthrough3 from './components/walkthrough/Walkthrough3';
 import Allsongs from './Pages/AllSongs';
 import Events from './Pages/Events';
 import Form from "./components/form/Form";
-import Sandbox from './Pages/Sandbox';
 import Category from "./components/category/Category";
 import PlayList from "./components/playlist/PlayList";
 import { Route, Routes } from "react-router-dom";
@@ -20,7 +19,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/category" element={<Category />} />
         <Route path="/allsongs" element={<Allsongs />} />
-        <Route path="/sandbox" element={<Sandbox />} />
+        <Route path='/playlist' element={<PlayList />} />
       </Routes>
     </div>
   );

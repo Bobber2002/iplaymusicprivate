@@ -2,7 +2,7 @@ import play from '../../assets/svgs/play.svg';
 
 const songClosed = () => {
     return (  
-        <div className="song flex items-center min-h-[3.5rem]">
+        <div className="song flex items-center min-h-[3.5rem] mt-6 mb-6">
           <img src={play} alt="player_icon" className="w-10 h-10 mr-4" />  
           <div className="flex items-center justify-between w-full min-h-full">
             <div className="flex flex-col justify-between min-h-[3.5rem]">
