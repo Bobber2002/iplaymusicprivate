@@ -1,12 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import AudioPlayer from "./components/AudioPlayer";
-import tracks from "./audiotracks";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
+import "./index.css";
+import App from "./App";
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
-    <AudioPlayer tracks={tracks} />
-  </React.StrictMode>,
-  rootElement
+    <Router>
+      <App />
+    </Router>
+  </React.StrictMode>
+
 );
