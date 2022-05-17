@@ -5,6 +5,9 @@ import { IoIosFingerPrint } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import "./Form.css";
 
+const AUTH_URL =
+  "https://accounts.spotify.com/authorize?client_id=a40a44e61b1d4ebdac071fcf42f5d5e9&response_type=code&redirect_uri=http://localhost:3000&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state";
+
 const Form = () => {
   const navigate = useNavigate();
 
@@ -38,14 +41,11 @@ const Form = () => {
             <RiLockPasswordLine />
           </div>
         </div>
-        <button
-          onClick={() => {
-            navigate("/walkthrough-1");
-          }}
-          className="login-button w-full border-4 border-black rounded-3xl p-2"
-        >
-          LOG IN
-        </button>
+        <div className="login-button min-w-full border-4 border-black rounded-3xl p-2">
+          <a href={AUTH_URL}>
+            <p className="uppercase w-full text-center">log in</p>
+          </a>
+        </div>
       </div>
       <div className="login-touch flex pt-8 flex-col items-center">
         <button

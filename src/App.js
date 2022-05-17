@@ -4,13 +4,17 @@ import Walkthrough3 from './components/walkthrough/Walkthrough3';
 import Events from './Pages/Events';
 import Form from "./components/form/Form";
 import Category from "./components/category/Category";
+import Dashboard from "./Pages/Dashboard";
 import { Route, Routes } from "react-router-dom";
+
+
+const code = new URLSearchParams(window.location.search).get("code")
 
 function App() {
   return (
     <div className="App h-full">
       <Routes>
-        <Route path="/" element={<Form />} />
+        <Route path="/" element={code ? <Dashboard code={code}/> : <Form />} />
         <Route path="/walkthrough-1" element={<Walkthrough1 />} />
         <Route path="/walkthrough-2" element={<Walkthrough2 />} />
         <Route path="/walkthrough-3" element={<Walkthrough3 />} />

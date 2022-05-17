@@ -7,31 +7,37 @@ const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
 const RESPONSE_TYPE = "token";
 
 function Data() {
-  const [token, setToken] = useState("");
+  let [token, setToken] = useState("");
   const [searchKey, setSearchKey] = useState("");
   const [artists, setArtists] = useState([]);
   const [song, setSong] = useState("");
   const [apiDataMe, setApiDataMe] = useState({});
 
   useEffect(() => {
+
+    console.log('getting token');
+
     const hash = window.location.hash;
     let getToken = window.localStorage.getItem("token");
 
     if (!getToken && hash) {
+        console.log(hash);
+        console.log(token);
       token = hash
         .substring(1)
         .split("&")
         .find((elem) => elem.startsWith("access_token"))
         .split("=")[1];
 
-      window.location.hash = "";
-      window.localStorage.setItem("token", getToken);
+        window.location.hash = "";
+        window.localStorage.setItem("token", token);
     }
-    
     setToken(getToken);
-  }, []);
+}, []);
 
-  useEffect(() => {
+useEffect(() => {
+    
+    console.log(token);
 
     async function getData(){
       const { data } = await axios.get("https://api.spotify.com/v1/me", {
@@ -65,15 +71,16 @@ function Data() {
         q: searchKey,
         type: "track",
       },
-    });
-    console.log(data.tracks.items);
+    }); 
+    // console.log(data.artists.items);
     setArtists(data.tracks.items);
   };
+  
 
 
   const renderArtists = () => {
     return artists.map((artist) => (
-      <div key={artist.id}>
+      <div key={artist.id} id={artist.id}>
         {/* {artist.images.length ? <img width={"100%"} src={artist.images[0].url} alt=""/> : <div>No Image</div>}   */}
         {artist.name}
         <audio id={artist.id + "pre"} src={song} />
@@ -83,8 +90,9 @@ function Data() {
             className="border-2"
             onClick={() => {
               setSong(artist.preview_url);
-              document.getElementById(artist.id + "pre").play();
-              console.log("Previewing " + artist.name);
+              setTimeout(() => {
+                document.getElementById(artist.id+'pre').play();
+              }, 200);
             }}
           >
             Preview
@@ -126,4 +134,4 @@ function Data() {
   );
 }
 
-export default ApiData;
+export default Data;
