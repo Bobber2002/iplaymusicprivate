@@ -1,8 +1,8 @@
-import Walkthrough1 from './components/walkthrough/Walkthrough1';
-import Walkthrough2 from './components/walkthrough/Walkthrough2';
-import Walkthrough3 from './components/walkthrough/Walkthrough3';
-import Allsongs from './Pages/AllSongs';
-import Events from './Pages/Events';
+import Walkthrough1 from "./components/walkthrough/Walkthrough1";
+import Walkthrough2 from "./components/walkthrough/Walkthrough2";
+import Walkthrough3 from "./components/walkthrough/Walkthrough3";
+import Allsongs from "./Pages/AllSongs";
+import Events from "./Pages/Events";
 import Form from "./components/form/Form";
 import Category from "./components/category/Category";
 import PlayList from "./components/playlist/PlayList";
@@ -19,7 +19,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/category" element={<Category />} />
         <Route path="/allsongs" element={<Allsongs />} />
-        <Route path='/playlist' element={<PlayList />} />
+        <Route path="/playlist" element={<PlayList />} />
       </Routes>
     </div>
   );
