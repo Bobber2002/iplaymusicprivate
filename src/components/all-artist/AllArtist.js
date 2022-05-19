@@ -7,6 +7,7 @@ import { FreeMode, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import { EffectCoverflow } from "swiper";
 import {
   IoIosArrowBack,
   IoMdSearch,
@@ -36,44 +37,77 @@ const AllArtist = () => {
         </div>
         <div className="allartists-content-container-slider mt-5 mb-5 gap-2">
           <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
-            freeMode={true}
-            pagination={{
-              clickable: true,
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            spaceBetween={70}
+            slidesPerView={"2"}
+            loop={true}
+            loopFillGroupWithBlank={true}
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 350,
+              modifier: 1,
+              slideShadows: true,
             }}
-            modules={[FreeMode, Pagination]}
+            pagination={true}
+            modules={[EffectCoverflow]}
             className="mySwiper"
           >
             <SwiperSlide>
-              <img src={playlistPhoto1} alt="playlist" />
+              <img
+                src="https://swiperjs.com/demos/images/nature-1.jpg"
+                className="rounded-lg drop-shadow-sm"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={playlistPhoto1} alt="playlist" />
+              <img
+                src="https://swiperjs.com/demos/images/nature-2.jpg"
+                className="rounded-lg drop-shadow-sm"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={playlistPhoto1} alt="playlist" />
+              <img
+                src="https://swiperjs.com/demos/images/nature-3.jpg"
+                className="rounded-lg drop-shadow-sm"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={playlistPhoto1} alt="playlist" />
+              <img
+                src="https://swiperjs.com/demos/images/nature-4.jpg"
+                className="rounded-lg drop-shadow-sm"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={playlistPhoto1} alt="playlist" />
+              <img
+                src="https://swiperjs.com/demos/images/nature-5.jpg"
+                className="rounded-lg drop-shadow-sm"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={playlistPhoto1} alt="playlist" />
+              <img
+                src="https://swiperjs.com/demos/images/nature-6.jpg"
+                className="rounded-lg drop-shadow-sm"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={playlistPhoto1} alt="playlist" />
+              <img
+                src="https://swiperjs.com/demos/images/nature-7.jpg"
+                className="rounded-lg drop-shadow-sm"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={playlistPhoto1} alt="playlist" />
+              <img
+                src="https://swiperjs.com/demos/images/nature-8.jpg"
+                className="rounded-lg drop-shadow-sm"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              {({ isActive }) => <p>{isActive ? "active" : "not active"}</p>}
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={playlistPhoto1} alt="playlist" />
+              <img
+                src="https://swiperjs.com/demos/images/nature-9.jpg"
+                className="rounded-lg drop-shadow-sm"
+              />
             </SwiperSlide>
           </Swiper>
         </div>
