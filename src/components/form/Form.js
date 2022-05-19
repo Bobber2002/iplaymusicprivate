@@ -44,6 +44,7 @@ const Form = () => {
           <label className="font-bold pl-2 pb-3 block">Username</label>
           <div className=" flex justify-center items-center border-b-4 border-black text-xl">
             <input
+              {...register("username")}
               className="grow h-12 text-base pr-2 pl-2"
               type="text"
               name="username"
@@ -57,6 +58,7 @@ const Form = () => {
           <label className="font-bold pl-2 pb-3 block">Password</label>
           <div className=" flex justify-center items-center border-b-4 border-black text-xl">
             <input
+              {...register("password")}
               className="grow h-12 text-base pr-2 pl-2"
               type="password"
               name="password"
@@ -75,7 +77,7 @@ const Form = () => {
       </form>
       <div className="login-touch flex pt-8 flex-col items-center">
         <button
-          onClick={() => navigate("/walkthrough-1")}
+          /*  onClick={() => navigate("/walkthrough-1")} */
           type="button"
           className="text-4xl bg-pink-500 w-16 h-16 text-white flex justify-center items-center rounded-full"
         >
