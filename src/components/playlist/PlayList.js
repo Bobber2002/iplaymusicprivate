@@ -36,11 +36,6 @@ const PlayList = () => {
           src={soundwave}
           alt="soundwave"
         />
-        <div className="playlist-header flex justify-between items-center text-white">
-          <IoIosArrowBack />
-          <h2 className="playlist-main-title font-light text-sm">PLAYLIST</h2>
-          <IoMdSearch />
-        </div>
         <h3 className="playlist-title mt-10 mb-8 text-4xl text-white font-semibold ">
           Playlist
         </h3>
