@@ -7,15 +7,40 @@ import Category from "./components/category/Category";
 import Dashboard from "./Pages/Dashboard";
 import PlayList from "./components/playlist/PlayList";
 import { Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getTokenFromResponse } from "./customHooks/api/spotify";
+import SpotifyWebApi from "spotify-web-api-js";
 
-
-const code = new URLSearchParams(window.location.search).get("code")
+const spotify = new SpotifyWebApi();
 
 function App() {
+
+  const [token, setToken] = useState(null);
+
+  useEffect(() => {
+    const hash = getTokenFromResponse();            
+    window.history.pushState({},null ,'/')  
+
+
+    const _token = hash.access_token;
+
+    if (_token){
+      setToken(_token)
+
+      spotify.setAccessToken(_token);
+
+      spotify.searchTracks('Never').then((user)=>{
+        console.log(user);
+      })
+    }
+  }, []);
+  
+  console.log(token);
+  
   return (
     <div className="App h-full">
       <Routes>
-        <Route path="/" element={code ? <Dashboard code={code}/> : <Form />} />
+        <Route path="/" element={token ? <Dashboard spotify={spotify}/> : <Form />} />
         <Route path="/walkthrough-1" element={<Walkthrough1 />} />
         <Route path="/walkthrough-2" element={<Walkthrough2 />} />
         <Route path="/walkthrough-3" element={<Walkthrough3 />} />
