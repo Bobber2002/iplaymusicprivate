@@ -53,7 +53,7 @@ function Onboarding1() {
       <div>
         <button
           onClick={() => {
-            navigate("/category");
+            navigate("/allsongs");
           }}
           className="uppercase"
         >
