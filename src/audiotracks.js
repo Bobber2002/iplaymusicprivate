@@ -1,25 +1,26 @@
-//import imgSrc from "./assets/images/artwork.jpg";
-//import imgSrc2 from "./assets/images/artwork2.jpg";
-//import imgSrc3 from "./assets/images/artwork3.jpg";
-import cali from "./assets/audio/cali-wataboi.mp3";
-import fifty from "./assets/audio/50-tobylane.mp3";
-import iwonder from "./assets/audio/iwonder-dreamheaven.mp3";
 
+import cali from "./assets/audio/Order.mp3";
+import fifty from "./assets/audio/Loneliness.mp3";
+import iwonder from "./assets/audio/Far from home.mp3";
 
 export default [
   {
-    title: "Cali",
-    artist: "Wataboi",
-    audioSrc: cali,
+    title: "Order",
+    artist: "ComaStudio",
+    audioSrc: cali
   },
   {
-    title: "50",
-    artist: "tobylane",
-    audioSrc: fifty,
+    title: "Loneliness",
+    artist: "Amaranta",
+    audioSrc: fifty
   },
   {
-    title: "I Wonder",
-    artist: "DreamHeaven",
-    audioSrc: iwonder,
+    title: "Far from home",
+    artist: "Irfan",
+    audioSrc: iwonder
   }
 ];
+
+  //Far From Home: Music by madirfan at Pixabay.com
+  //Loneliness...: Music by AmarantaMusic from Pixabay.com
+  //Music by ComaStudio from Pixabay.com

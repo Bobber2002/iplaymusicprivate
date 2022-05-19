@@ -69,7 +69,7 @@ input[type=range]::-moz-range-thumb {
 input[type=range]::-ms-thumb {
   border: none;
   height: 12px;
-  width: 112px;
+  width: 12px;
   background: #f00;
   /*cursor: none;*/
 }
@@ -101,6 +101,7 @@ btw, any pink errors in console has to do w. supporting win32 - just ignore...
 }
 
 .track-info {
+  font-family: Poppins, sans-serif;
   text-align: center;
   z-index: 1;
   position: relative;
@@ -142,4 +143,20 @@ btw, any pink errors in console has to do w. supporting win32 - just ignore...
 
 .audio-controls path {
   fill: var(--dark);
+}
+
+
+.counters {
+  font-family: Poppins, sans-serif;
+  font-weight: 200;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.counter {
+  width: 40px;
+  height: 21px;
+  border: none;
+  padding: 0 3px
 }

@@ -58,6 +58,7 @@ const AudioPlayer = ({ tracks }) => {
   //----- playing or not  ----------------------------------------------------
 
   useEffect(() => {
+
     if (isPlaying) {
       audioRef.current.play();
       startTimer();
@@ -84,7 +85,7 @@ const AudioPlayer = ({ tracks }) => {
   }, [trackIndex]); // eslint-disable-line
 
 
-  //--------- ...scrubbing forward/backward-machinery -------------------
+  //--------- ...scrubbing forward/backward-machinery using buttons -------------------
 
   const doScrubForward = () => {
 
@@ -98,6 +99,21 @@ const AudioPlayer = ({ tracks }) => {
     audioRef.current.currentTime = audioRef.current.currentTime - 10;
     setTrackProgress(audioRef.current.currentTime);
 
+  }
+
+  //--- using mouse on track --------------
+
+  const onScrub = (value) => {
+    clearInterval(intervalRef.current);
+    audioRef.current.currentTime = value;
+    setTrackProgress(audioRef.current.currentTime);
+  }
+
+  const onScrubEnd = () => {
+    if (!isPlaying) {
+      setIsPlaying(true);
+    }
+    startTimer();
   }
 
   //--------- ...pausing -------------------------------------------------
@@ -123,11 +139,15 @@ const AudioPlayer = ({ tracks }) => {
           min="0"
           max={duration ? duration : `${duration}`}
           className="progress"
-          onChange={(e) => (e.target.value)}
-          //onMouseUp={onScrubEnd}
+          onChange={(e) => onScrub(e.target.value)}
+          onMouseUp={onScrubEnd}
           //onKeyUp={onScrubEnd}
           style={{ background: '#777' }}
         />
+        <div className='counters'>
+          <input className='counter' type='text' value={'0:00'} />
+          <input className='counter' type='text' value={`${(duration / 60).toFixed(0)}:${Math.floor(duration % 60).toFixed(0)}`} />
+        </div>
         <AudioControls
           isPlaying={isPlaying}
           onPrevClick={toPrevTrack}
@@ -142,3 +162,8 @@ const AudioPlayer = ({ tracks }) => {
 };
 
 export default AudioPlayer;
+
+
+//Far From Home: Music by madirfan at Pixabay.com
+//Loneliness...: Music by AmarantaMusic from Pixabay.com
+//Order: Music by ComaStudio from Pixabay.com
