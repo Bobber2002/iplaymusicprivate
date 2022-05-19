@@ -34,7 +34,7 @@ const AllArtist = () => {
           <h4 className="font-semibold text-sm">Artist Of The Month</h4>
           <p className="text-[#EE0979] font-light text-sm">View All</p>
         </div>
-        <div className="allartists-content-container-slider mt-5 mb-5 gap-2">
+        <div className="allartists-content-container-slider mt-5 mb-5">
           <Swiper
             slidesPerView={3}
             spaceBetween={30}
@@ -47,7 +47,7 @@ const AllArtist = () => {
           >
             <SwiperSlide>
               <img
-                className="max-w-xs h-36 rounded-2xl"
+                className="max-w-72 h-36 rounded-2xl"
                 src={playlistPhoto1}
                 alt="playlist"
               />
