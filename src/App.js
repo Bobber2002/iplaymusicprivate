@@ -22,6 +22,7 @@ function App() {
         <Route path="/allsongs" element={<Allsongs />} />
         <Route path="/playlist" element={<PlayList />} />
         <Route path="/allartists" element={<AllArtist />} />
+        <Route path="/audioplayer" element={<AudioPlayer />} />  
       </Routes>
     </div>
   );
