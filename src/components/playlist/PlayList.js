@@ -2,6 +2,7 @@
 import SongClosed from "../../components/Allsongs/songClosed";
 import SongOpen from "../../components/Allsongs/songOpen";
 
+
 import soundwave from "././../../assets/svgs/soundwave.svg";
 import React from "react";
 import playlistPhoto1 from "./../../assets/images/playlistPhoto1.png";
@@ -29,96 +30,69 @@ const PlayList = () => {
   return (
     <div className="playlist-content  pt-8 pb-8 max-w-md m-auto">
       <div>
-        <div className="px-6">
-          <img
-            className=" soundwave w-full translate-y-6"
-            src={soundwave}
-            alt="soundwave"
-          />
-          <div className="playlist-header flex justify-between items-center text-white">
-            <IoIosArrowBack />
-            <h2 className="playlist-main-title font-light text-sm">PLAYLIST</h2>
-            <IoMdSearch />
-          </div>
-          <h3 className="playlist-title mt-10 mb-8 text-4xl text-white font-semibold ">
-            Playlist
-          </h3>
+        <div className='px-6'>
+        <img
+          className=" soundwave w-full translate-y-6"
+          src={soundwave}
+          alt="soundwave"
+        />
+        <div className="playlist-header flex justify-between items-center text-white">
+          <IoIosArrowBack />
+          <h2 className="playlist-main-title font-light text-sm">PLAYLIST</h2>
+          <IoMdSearch />
+        </div>
+        <h3 className="playlist-title mt-10 mb-8 text-4xl text-white font-semibold ">
+          Playlist
+        </h3>
         </div>
         <div>
-          <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
-            centeredSlides={true}
-            spaceBetween={70}
-            slidesPerView={"2"}
-            loop={true}
-            loopFillGroupWithBlank={true}
-            coverflowEffect={{
-              rotate: 0,
-              stretch: 0,
-              depth: 350,
-              modifier: 1,
-              slideShadows: true,
-            }}
-            pagination={true}
-            modules={[EffectCoverflow]}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              <img
-                src="https://swiperjs.com/demos/images/nature-1.jpg"
-                className="rounded-lg drop-shadow-sm"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://swiperjs.com/demos/images/nature-2.jpg"
-                className="rounded-lg drop-shadow-sm"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://swiperjs.com/demos/images/nature-3.jpg"
-                className="rounded-lg drop-shadow-sm"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://swiperjs.com/demos/images/nature-4.jpg"
-                className="rounded-lg drop-shadow-sm"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://swiperjs.com/demos/images/nature-5.jpg"
-                className="rounded-lg drop-shadow-sm"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://swiperjs.com/demos/images/nature-6.jpg"
-                className="rounded-lg drop-shadow-sm"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://swiperjs.com/demos/images/nature-7.jpg"
-                className="rounded-lg drop-shadow-sm"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://swiperjs.com/demos/images/nature-8.jpg"
-                className="rounded-lg drop-shadow-sm"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://swiperjs.com/demos/images/nature-9.jpg"
-                className="rounded-lg drop-shadow-sm"
-              />
-            </SwiperSlide>
-          </Swiper>
+        <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        spaceBetween={70}
+        slidesPerView={"2"}
+        loop={true}
+        loopFillGroupWithBlank={true}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 350,
+          modifier: 1,
+          slideShadows: true
+        }}
+        pagination={true}
+        modules={[EffectCoverflow]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-1.jpg" className="rounded-lg drop-shadow-sm"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" className="rounded-lg drop-shadow-sm"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" className="rounded-lg drop-shadow-sm"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" className="rounded-lg drop-shadow-sm"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-5.jpg" className="rounded-lg drop-shadow-sm"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-6.jpg" className="rounded-lg drop-shadow-sm"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-7.jpg" className="rounded-lg drop-shadow-sm"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-8.jpg" className="rounded-lg drop-shadow-sm"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-9.jpg" className="rounded-lg drop-shadow-sm"/>
+        </SwiperSlide>
+      </Swiper>
         </div>
       </div>
       <div className="playlist-content-container px-6">
@@ -268,11 +242,11 @@ const PlayList = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
-        <button className="login-button w-[21rem] border-4 border-[#EE0979] rounded-3xl p-2 mt-10 mb-10 text-pink-700">
-          LISTEN ALL
-        </button>
-      </div>
+<div className='flex justify-center'>
+      <button className="login-button w-[21rem] border-4 border-[#EE0979] rounded-3xl p-2 mt-10 mb-10 text-pink-700">
+        LISTEN ALL
+      </button>
+</div>
       {/* <div className="category-menu flex pt-8 justify-between items-center w-full m-auto">
         <button className=" text-2xl">
           <IoIosPulse className=" text-2xl text-[#FF6A00] " />
