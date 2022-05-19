@@ -8,6 +8,7 @@ import Category from "./components/category/Category";
 import PlayList from "./components/playlist/PlayList";
 import { Route, Routes } from "react-router-dom";
 import AllArtist from "./components/all-artist/AllArtist";
+import AudioPlayer from "./components/AudioPlayer";
 
 function App() {
   return (
