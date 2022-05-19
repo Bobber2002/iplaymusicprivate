@@ -1,6 +1,7 @@
 // create spotify play list page that can shows the playlist of the selected category and the playlist of the selected artist and the playlist of the selected event
-import SongClosed from '../../components/Allsongs/songClosed';
-import SongOpen from '../../components/Allsongs/songOpen';
+import SongClosed from "../../components/Allsongs/songClosed";
+import SongOpen from "../../components/Allsongs/songOpen";
+
 
 import soundwave from "././../../assets/svgs/soundwave.svg";
 import React from "react";
