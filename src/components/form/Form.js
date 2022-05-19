@@ -4,20 +4,48 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import { IoIosFingerPrint } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import "./Form.css";
+//form validation
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+const schema = yup.object({
+  username: yup
+    .string()
+    .required("username is required")
+    .matches(/^[aA-zZA-y -]+$/, "message must have a word")
+    .min(2, "the username should have to be 2 letter length")
+    .max(20, "the username shoul not be more than 20 word"),
+  password: yup
+    .string()
+    .required("password is required")
+    .matches(/^[aA-zZA-y -]+$/, "message must have a word")
+    .min(2, "the password should have to be 2 letter length")
+    .max(20, "the password shoul not be more than 20 word"),
+});
 
 const Form = () => {
   const navigate = useNavigate();
-
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ resolver: yupResolver(schema) });
+  const onSubmit = (data) => {
+    console.log(data);
+  };
   return (
     <div className="login-form-page h-full pl-6 pr-6 pt-8 pb-8 max-w-md m-auto">
       <div className="login-header ">
         <h2 className="text-3xl">Log In</h2>
       </div>
-      <div className="login-form" action="">
+      <div className="login-form" onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group mb-6">
           <label className="font-bold pl-2 pb-3 block">Username</label>
           <div className=" flex justify-center items-center border-b-4 border-black text-xl">
+            {errors.username?.message}
             <input
+              {...register("username")}
               className="grow h-12 text-base pr-2 pl-2"
               type="text"
               name="username"
@@ -29,7 +57,9 @@ const Form = () => {
         <div className="form-group mb-6">
           <label className="font-bold pl-2 pb-3 block">Password</label>
           <div className=" flex justify-center items-center border-b-4 border-black text-xl">
+            {errors.password?.message}
             <input
+              {...register("password")}
               className="grow h-12 text-base pr-2 pl-2"
               type="text"
               name="password"
