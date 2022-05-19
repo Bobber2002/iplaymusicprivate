@@ -46,39 +46,34 @@ const AllArtist = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <img
-                className="max-w-xs h-36 rounded-2xl"
-                src={playlistPhoto1}
-                alt="playlist"
-              />
+              <img src={playlistPhoto1} alt="playlist" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                className="max-w-xs h-36 rounded-2xl"
-                src={playlistPhoto1}
-                alt="playlist"
-              />
+              <img src={playlistPhoto1} alt="playlist" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                className="max-w-xs h-36 rounded-2xl"
-                src={playlistPhoto1}
-                alt="playlist"
-              />
+              <img src={playlistPhoto1} alt="playlist" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                className="max-w-xs h-36 rounded-2xl"
-                src={playlistPhoto1}
-                alt="playlist"
-              />
+              <img src={playlistPhoto1} alt="playlist" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                className="max-w-xs h-36 rounded-2xl"
-                src={playlistPhoto1}
-                alt="playlist"
-              />
+              <img src={playlistPhoto1} alt="playlist" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={playlistPhoto1} alt="playlist" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={playlistPhoto1} alt="playlist" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={playlistPhoto1} alt="playlist" />
+            </SwiperSlide>
+            <SwiperSlide>
+              {({ isActive }) => <p>{isActive ? "active" : "not active"}</p>}
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={playlistPhoto1} alt="playlist" />
             </SwiperSlide>
           </Swiper>
         </div>
