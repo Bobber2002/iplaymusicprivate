@@ -9,6 +9,8 @@ import Category from "./components/category/Category";
 import PlayList from "./components/playlist/PlayList";
 import { Route, Routes } from "react-router-dom";
 import AllArtist from "./components/all-artist/AllArtist";
+import AudioPlayer from "./components/AudioPlayer";
+import tracks from "./audiotracks.js";
 
 function App() {
   return (
@@ -21,9 +23,10 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/category" element={<Category />} />
         <Route path="/allsongs" element={<Allsongs />} />
-        <Route path='/playlist' element={<PlayList />} />
         <Route path='/trends' element={<Trends />} />
-        <Route path='/allArtist' element={<AllArtist />} />
+        <Route path="/playlist" element={<PlayList />} />
+        <Route path="/allartists" element={<AllArtist />} />
+        <Route path="/audioplayer" element={<AudioPlayer tracks={tracks} />} />
       </Routes>
     </div>
   );
