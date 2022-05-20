@@ -5,7 +5,6 @@ import SongOpen from "../../components/Allsongs/songOpen";
 
 import soundwave from "././../../assets/svgs/soundwave.svg";
 import React from "react";
-import playlistPhoto1 from "./../../assets/images/playlistPhoto1.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -102,7 +101,7 @@ const PlayList = () => {
           </h4>
         </div>
         {/* songComp */}
-        {/* <SongClosed/>  */}
+        {/* <SongOpen/>  */}
         <div className="playlist-content-item">
           <div className="playlist-content-item-header flex justify-between items-center mt-3 p-2">
             <div className="playlist-content-item-main flex justify-center items-center gap-3">
