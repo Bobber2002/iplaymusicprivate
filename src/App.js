@@ -1,3 +1,4 @@
+import tracks from "./audiotracks.js";
 import Walkthrough1 from './components/walkthrough/Walkthrough1';
 import Walkthrough2 from './components/walkthrough/Walkthrough2';
 import Walkthrough3 from './components/walkthrough/Walkthrough3';
@@ -12,12 +13,11 @@ import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getTokenFromResponse } from "./customHooks/api/spotify";
 import SpotifyWebApi from "spotify-web-api-js";
-import AudioPlayer from "./components/AudioPlayer";
+import Audioplayerpage from './Pages/Audioplayerpage';
 import AllArtist from "./components/all-artist/AllArtist";
 import Navbar from "./components/nav/navbar";
 import Header from "./components/header/header";
 import useMediaQuery from "react-hook-media-query";
-import tracks from "./audiotracks.js";
 
 const spotify = new SpotifyWebApi();
 function App() {
@@ -53,7 +53,7 @@ function App() {
         <Routes>
           {token ?
           <>
-          <Route path="/" element={<Search spotify={spotify} />}/>
+          <Route path="/" element={<Walkthrough1 />}/>
           <Route path="/search" element={<Search spotify={spotify} setPlayingSong={handleSetSong}/>} />
           <Route path="/walkthrough-1" element={<Walkthrough1 />} />
           <Route path="/walkthrough-2" element={<Walkthrough2 />} />
@@ -63,7 +63,8 @@ function App() {
           <Route path="/allsongs" element={<Allsongs />} />
           <Route path="/playlist" element={<PlayList />} />
           <Route path="/allartists" element={<AllArtist />} />
-          <Route path="/audioplayer" element={<AudioPlayer tracks={tracks} />} />
+          <Route path="/audioplayer" element={<Audioplayerpage tracks={tracks} />} />
+
           </>
           
           :
