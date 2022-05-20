@@ -51,7 +51,7 @@ function App() {
         <Routes>
           {token ?
           <>
-          <Route path="/" element={<Search spotify={spotify} />}/>
+          <Route path="/" element={<Walkthrough1 />}/>
           <Route path="/search" element={<Search spotify={spotify} setPlayingSong={handleSetSong}/>} />
           <Route path="/walkthrough-1" element={<Walkthrough1 />} />
           <Route path="/walkthrough-2" element={<Walkthrough2 />} />
