@@ -14,13 +14,11 @@ const schema = yup.object({
   username: yup
     .string()
     .required("username is required")
-    .matches(/^[aA-zZA-y -]+$/, "message must have a word")
     .min(2, "the username should have to be 2 letter length")
     .max(20, "the username shoul not be more than 20 word"),
   password: yup
     .string()
     .required("password is required")
-
     .min(2, "the password should have to be 2 letter length"),
 });
 
@@ -81,14 +79,14 @@ const Form = () => {
           </div>
           {errors.password?.message}
         </div>
-        <a
+        <button
           type="submit"
-          className={`login-button w-full border-4 text-center ${
+          className={`login-buuton w-full border-4 text-center ${
             isDarkMode ? "border-white" : "border-black"
           } rounded-3xl p-2`}
         >
           LOG IN
-        </a>
+        </button>
       </form>
       <div className="login-touch flex pt-8 flex-col items-center">
         <button
