@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import useMediaQuery from "react-hook-media-query";
 import "./Form.css";
 
-const Form = () => {
 import { accessUrl } from "../../customHooks/api/spotify";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -88,6 +87,7 @@ const Form = () => {
           {errors.password?.message}
         </div>
         <button
+          onClick={()=>{window.location.href=accessUrl}}
           type="submit"
           className={`login-button w-full border-4 text-center ${
             isDarkMode ? "border-white" : "border-black"
