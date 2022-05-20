@@ -15,6 +15,7 @@ import AudioPlayer from "./components/AudioPlayer";
 import AllArtist from "./components/all-artist/AllArtist";
 import Navbar from "./components/nav/navbar";
 import Header from "./components/header/header";
+import tracks from "./audiotracks.js";
 
 const spotify = new SpotifyWebApi();
 function App() {
@@ -59,7 +60,7 @@ function App() {
           <Route path="/allsongs" element={<Allsongs />} />
           <Route path="/playlist" element={<PlayList />} />
           <Route path="/allartists" element={<AllArtist />} />
-          <Route path="/audioplayer" element={<AudioPlayer />} />
+          <Route path="/audioplayer" element={<AudioPlayer tracks={tracks} />} />
           </>
           
           :
