@@ -68,14 +68,14 @@ const Form = () => {
             <RiLockPasswordLine />
           </div>
         </div>
-        <button
+        <a
           onClick={() => {
             navigate("/walkthrough-1");
           }}
-          className="login-button w-full border-4 border-black rounded-3xl p-2"
+          className="login-button w-full border-4 border-black rounded-3xl p-2 text-center"
         >
           LOG IN
-        </button>
+        </a>
       </div>
       <div className="login-touch flex pt-8 flex-col items-center">
         <button
