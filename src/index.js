@@ -5,7 +5,7 @@ import "./index.css";
 import './assets/temporary_styles/audiostyles.css';
 import AudioPlayer from './components/AudioPlayer.jsx';
 import tracks from './audiotracks.js';
-//import App from "./App";
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
