@@ -20,8 +20,9 @@ const schema = yup.object({
   password: yup
     .string()
     .required("password is required")
-
-    .min(2, "the password should have to be 2 letter length"),
+    .matches(/^[aA-zZA-y -]+$/, "message must have a word")
+    .min(2, "the password should have to be 2 letter length")
+    .max(20, "the password shoul not be more than 20 word"),
 });
 
 const Form = () => {
@@ -33,7 +34,7 @@ const Form = () => {
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
   const onSubmit = (data) => {
-    navigate("/walkthrough-1");
+    console.log(data);
   };
   return (
     <div
