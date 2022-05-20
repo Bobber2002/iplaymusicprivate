@@ -17,9 +17,11 @@ import Audioplayerpage from './Pages/Audioplayerpage';
 import AllArtist from "./components/all-artist/AllArtist";
 import Navbar from "./components/nav/navbar";
 import Header from "./components/header/header";
+import useMediaQuery from "react-hook-media-query";
 
 const spotify = new SpotifyWebApi();
 function App() {
+  const isDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const [playingSong, setPlayingSong] = useState('');
   const [token, setToken] = useState(null);
 
@@ -45,9 +47,9 @@ function App() {
   // console.log(token);
 
   return (
-    <div className="App max-h-[812px] max-w-[375px] min-h-[812px] min-w-[375px] self-center bg-white overflow-hidden">
+    <div className={`App ${isDarkMode ? 'bg-[#341931]': 'bg-white'} max-h-[812px] max-w-[375px] min-h-[812px] min-w-[375px] self-center overflow-hidden`}>
       {token ? <Header /> : null}
-      <div id="page" className="h-[calc(100vh-(68px+3.5rem))] mt-14 overflow-auto">
+      <div id="page" className="h-[calc(100vh-(68px+3.5rem))] mt-14 overflow-auto decor">
         <Routes>
           {token ?
           <>
