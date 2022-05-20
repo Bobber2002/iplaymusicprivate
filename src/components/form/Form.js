@@ -5,27 +5,30 @@ import { IoIosFingerPrint } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import useMediaQuery from "react-hook-media-query";
 import "./Form.css";
-//form validation
+
+const Form = () => {
+import { accessUrl } from "../../customHooks/api/spotify";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
-const schema = yup.object({
-  username: yup
-    .string()
-    .required("username is required")
-    .matches(/^[aA-zZA-y -]+$/, "message must have a word")
-    .min(2, "the username should have to be 2 letter length")
-    .max(20, "the username shoul not be more than 20 word"),
-  password: yup
-    .string()
-    .required("password is required")
-    .matches(/^[aA-zZA-y -]+$/, "message must have a word")
-    .min(2, "the password should have to be 2 letter length")
-    .max(20, "the password shoul not be more than 20 word"),
-});
-
 const Form = () => {
+  //form validation
+
+  const schema = yup.object({
+    username: yup
+      .string()
+      .required("username is required")
+      .matches(/^[aA-zZA-y -]+$/, "message must have a word")
+      .min(2, "the username should have to be 2 letter length")
+      .max(20, "the username shoul not be more than 20 word"),
+    password: yup
+      .string()
+      .required("password is required")
+
+      .min(2, "the password should have to be 2 letter length"),
+  });
+
   const isDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const navigate = useNavigate();
   const {
@@ -35,6 +38,7 @@ const Form = () => {
   } = useForm({ resolver: yupResolver(schema) });
   const onSubmit = (data) => {
     console.log(data);
+    navigate("/walkthrough-1");
   };
   return (
     <div
@@ -94,6 +98,7 @@ const Form = () => {
       <div className="login-touch flex pt-8 flex-col items-center">
         <button
           onClick={() => navigate("/walkthrough-1")}
+       
           type="button"
           className="text-4xl bg-pink-500 w-16 h-16 text-white flex justify-center items-center rounded-full"
         >
