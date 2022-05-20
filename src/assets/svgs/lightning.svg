@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110" height="110" viewBox="0 0 110 110">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ee0979"/>
+      <stop offset="1" stop-color="#ff6a00"/>
+    </linearGradient>
+    <filter id="Ellipse_10" x="0" y="0" width="110" height="110" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_10)">
+    <circle id="Ellipse_10-2" data-name="Ellipse 10" cx="32.5" cy="32.5" r="32.5" transform="translate(22.5 22.5)" fill="url(#linear-gradient)"/>
+  </g>
+  <path id="_ionicons_svg_ios-flash" d="M147.893,47.366H139.2l4.21-15.015a.325.325,0,0,0-.578-.273L128.074,51.431a.678.678,0,0,0,.506,1.076h8.692l-4.21,15.015a.325.325,0,0,0,.578.273L148.4,48.451A.685.685,0,0,0,147.893,47.366Z" transform="translate(-83.45 5.563)" fill="#fff"/>
+</svg>

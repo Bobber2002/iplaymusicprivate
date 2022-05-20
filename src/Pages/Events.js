@@ -1,9 +1,7 @@
 import {AiOutlineLeft, AiOutlineSearch} from 'react-icons/ai';
-import events1 from '../assets/svgs/events1.svg';
-import person1 from '../assets/svgs/person1.svg';
-import person2 from '../assets/svgs/person2.svg';
-import person3 from '../assets/svgs/person3.svg';
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import EventNews from '../components/events/EventNews';
 
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -32,23 +30,10 @@ const Events = () => {
                 <SwiperSlide><div  className='bg-[#EE0979] text-white font-extrabold text-center w-fit p-3 rounded-full relative right-40'>#2022</div></SwiperSlide>
             </div>
       </Swiper>
-        <div className='event__container mt-14'>
-            <div className='bg-[#111625] text-white rounded-xl'>
-            <img src={events1} alt=""/>
-                <div className='flex flex-row text-[#FF1168] m-4 text-sm gap-1'>
-                    <p>#spotify,</p>
-                    <p>#musicworld,</p>
-                    <p>#grammy2020</p>
-                </div>
-                    <div className='flex flex-row items-center -mt-6'>
-                        <img className='ml-4' src={person3} alt="" />
-                        <img className='-ml-7' src={person2} alt="" />
-                        <img className='-ml-12' src={person1} alt="" />
-                        <h5 className='text-sm -ml-2'><strong>3,123</strong> are talking about this</h5>
-                    </div>
-                    <h1 className='font-bold ml-4 text-xl pb-8'>Coachella 2019 Day Three Highlights</h1>
-            </div>
-        </div>
+    <EventNews/>
+    <EventNews/>
+    <EventNews/>
+    <EventNews/>
     </div>
     );
 }

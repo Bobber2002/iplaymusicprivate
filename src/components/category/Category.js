@@ -5,12 +5,6 @@ import { IoIosArrowBack, IoMdSearch, IoIosArrowForward, IoIosPulse, IoIosMicroph
 const Category = () => {
   return (
     <div className="category-content p-5 max-w-md m-auto">
-      <div className="category-header flex justify-between items-center">
-        <IoIosArrowBack className="text-2xl" />
-        <h2 className="category-main-title">CATEGORIES</h2>
-        <IoMdSearch className="text-2xl" />
-      </div>
-      <div>
         <h1 className="category-title mt-5 mb-5 pb-2 text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#EE0979] to-[#FF6A00] ">
           Categories
         </h1>
@@ -85,24 +79,6 @@ const Category = () => {
             <span className="dot h-12 text-2xl">...</span>
           </div>
         </selected-option>
-      </div>
-      <div className="category-menu flex pt-8 justify-between items-center w-full m-auto">
-        <button className=" text-2xl">
-          <IoIosPulse className="text-black" />
-        </button>
-        <button>
-          <IoIosMicrophone className=" bg-gradient-to-r from-[#EE0979] to-[#FF6A00] text-2xl text-white rounded-full" />
-        </button>
-        <button>
-          <IoMdWifi className=" bg-gradient-to-r from-[#EE0979] to-[#FF6A00] text-4xl text-white rounded-full" />
-        </button>
-        <button>
-          <IoIosContrast className=" bg-gradient-to-r from-[#EE0979] to-[#FF6A00] text-2xl text-white rounded-full" />
-        </button>
-        <button>
-          <IoMdSettings className=" bg-gradient-to-r from-[#EE0979] to-[#FF6A00] text-2xl text-white rounded-full" />
-        </button>
-      </div>
     </div>
   );
 };
