@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/iplaymusicprivate/static/css/main.4fa046d4.css",
+    "main.js": "/iplaymusicprivate/static/js/main.2aa1ae11.js",
+    "static/media/Far from home.mp3": "/iplaymusicprivate/static/media/Far from home.9a5bdeae21191a21336e.mp3",
+    "static/media/Loneliness.mp3": "/iplaymusicprivate/static/media/Loneliness.27d4c4fe89beeac0d7d8.mp3",
+    "static/media/Order.mp3": "/iplaymusicprivate/static/media/Order.b9133ab42a8b9b52072d.mp3",
+    "static/media/record.svg": "/iplaymusicprivate/static/media/record.6646a359d582a48ae9508e7e2eddc552.svg",
+    "static/media/person3.svg": "/iplaymusicprivate/static/media/person3.d48d581859fdde6d1e36ea2335740905.svg",
+    "static/media/person1.svg": "/iplaymusicprivate/static/media/person1.e01d36407955c5732dd3fe0ee7a95be2.svg",
+    "static/media/playlistPhoto1.png": "/iplaymusicprivate/static/media/playlistPhoto1.e506718572442fb157f2.png",
+    "static/media/person2.svg": "/iplaymusicprivate/static/media/person2.3638b51072e4226d08c58dbdbc928b13.svg",
+    "static/media/tutorialColor1.svg": "/iplaymusicprivate/static/media/tutorialColor1.126f41a30fd8ecf740218815fbcbaa56.svg",
+    "static/media/lightning.svg": "/iplaymusicprivate/static/media/lightning.3390af7f4de7ec0d8680dcbe73bfb9d9.svg",
+    "static/media/soundwave.svg": "/iplaymusicprivate/static/media/soundwave.a932b6575cad9881206bff4001a37cb6.svg",
+    "static/media/play.svg": "/iplaymusicprivate/static/media/play.e37a50249b514de77d0e67ce9a1af224.svg",
+    "static/media/goForward.svg": "/iplaymusicprivate/static/media/goForward.26c709bd20c8e45981107fe481c12c38.svg",
+    "static/media/goPrev.svg": "/iplaymusicprivate/static/media/goPrev.914950612711aeafc1ba6e38f347641b.svg",
+    "static/media/doPlay.svg": "/iplaymusicprivate/static/media/doPlay.f01ab4ac9cc60f2c993ff77d9d9f6bf9.svg",
+    "static/media/doPause.svg": "/iplaymusicprivate/static/media/doPause.a177df92b4856c4ecc00da1fb7bf0382.svg",
+    "index.html": "/iplaymusicprivate/index.html",
+    "static/media/scrubForward.svg": "/iplaymusicprivate/static/media/scrubForward.4489038cdedc9b9775233a426600a1ff.svg",
+    "static/media/scrubBack.svg": "/iplaymusicprivate/static/media/scrubBack.f3fba34a0a892af9b9cd2e2532e3e816.svg",
+    "main.4fa046d4.css.map": "/iplaymusicprivate/static/css/main.4fa046d4.css.map",
+    "main.2aa1ae11.js.map": "/iplaymusicprivate/static/js/main.2aa1ae11.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4fa046d4.css",
+    "static/js/main.2aa1ae11.js"
+  ]
+}
