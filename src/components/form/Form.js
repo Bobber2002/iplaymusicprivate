@@ -81,12 +81,14 @@ const Form = () => {
           </div>
           {errors.password?.message}
         </div>
-        <button
+        <a
           type="submit"
-          className="login-button w-full border-4 border-black rounded-3xl p-2"
+          className={`login-button w-full border-4 text-center ${
+            isDarkMode ? "border-white" : "border-black"
+          } rounded-3xl p-2`}
         >
           LOG IN
-        </button>
+        </a>
       </form>
       <div className="login-touch flex pt-8 flex-col items-center">
         <button
