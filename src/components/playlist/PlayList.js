@@ -27,14 +27,14 @@ import {
 
 const PlayList = () => {
   return (
-    <div className="playlist-content  pt-8 pb-8 max-w-md m-auto">
+    <div className="playlist-content relative z-0 pt-8 pb-8 max-w-md m-auto">
       <div>
-        <div className='px-6'>
         <img
-          className=" soundwave w-full translate-y-6"
+          className="absolute top-[-520px] soundwave w-full translate-y-6"
           src={soundwave}
           alt="soundwave"
         />
+        <div className='px-6'>
         <h3 className="playlist-title mt-10 mb-8 text-4xl text-white font-semibold ">
           Playlist
         </h3>

@@ -22,7 +22,7 @@ const Search = ({spotify, setPlayingSong}) => {
   return (
     <div id="search" className="flex flex-col max-w-[calc(100vw-3rem)]">
       <form className="h-12 border-b-4 border-black mx-6 mb-4 flex px-2" type="search" onInput={(e)=>setSearchKey(e.target.value)}>
-        <input type="search" placeholder="Search songs/artists" className="w-full border-none outline-none"/>
+        <input type="search" placeholder="Search songs/artists" className="w-full border-none outline-none bg-transparent"/>
       </form>
       <div className="px-4 flex flex-col">
         {songs.map((song)=>

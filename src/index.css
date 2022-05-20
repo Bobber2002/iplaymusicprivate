@@ -10,6 +10,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
 }
 html,
 body,
@@ -24,13 +26,13 @@ body {
   background-color: #787878;
   overflow: hidden;
 }
+
+*::-webkit-scrollbar {
+  display: none;
+}
 .soundwave {
-  position: absolute;
-  top: -320px;
-  left: 0;
-  width: 100%;
+  width: 150%;
   height: 100%;
-  z-index: -1;
   background: linear-gradient(
     to right,
     rgba(255, 255, 255, 0.1) 0%,
@@ -39,4 +41,8 @@ body {
   );
   background-size: 400% 400%;
   animation: soundwave 1.2s ease-in-out infinite;
+}
+
+.slide_left{
+  transform: translateX(-120px);
 }
