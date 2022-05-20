@@ -47,10 +47,9 @@ function App() {
       {token ? <Header /> : null}
       <div id="page" className="h-[calc(100vh-(68px+3.5rem))] mt-14 overflow-auto">
         <Routes>
-          <Route
-            path="/"
-            element={token ? <Search spotify={spotify} /> : <Form />}
-          />
+          {token ?
+          <>
+          <Route path="/" element={<Search spotify={spotify} />}/>
           <Route path="/search" element={<Search spotify={spotify} setPlayingSong={handleSetSong}/>} />
           <Route path="/walkthrough-1" element={<Walkthrough1 />} />
           <Route path="/walkthrough-2" element={<Walkthrough2 />} />
@@ -61,6 +60,12 @@ function App() {
           <Route path="/playlist" element={<PlayList />} />
           <Route path="/allartists" element={<AllArtist />} />
           <Route path="/audioplayer" element={<AudioPlayer />} />
+          </>
+          
+          :
+          <Route path="/" element={<Form/>}/>
+          
+          }
         </Routes>
       </div>
       {token ? <Navbar playingSong={playingSong} /> : null}
