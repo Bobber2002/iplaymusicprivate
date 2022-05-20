@@ -18,6 +18,11 @@ body,
 }
 body {
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #787878;
+  overflow: hidden;
 }
 .soundwave {
   position: absolute;
