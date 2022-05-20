@@ -6,12 +6,10 @@ import { useNavigate } from "react-router-dom";
 import useMediaQuery from "react-hook-media-query";
 import "./Form.css";
 
-const Form = () => {
 import { accessUrl } from "../../customHooks/api/spotify";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-
 
 const Form = () => {
   //form validation
@@ -99,7 +97,6 @@ const Form = () => {
       <div className="login-touch flex pt-8 flex-col items-center">
         <button
           onClick={() => navigate("/walkthrough-1")}
-       
           type="button"
           className="text-4xl bg-pink-500 w-16 h-16 text-white flex justify-center items-center rounded-full"
         >
